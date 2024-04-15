@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Joti+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Terimakasih</title>
+  </head>
+  <body class="bg-cyan-600">
+    <div class="flex items-center mt-4 flex-col">
+      <img class="w-36" src="../logo_ORDerNwow-removebg-preview.png" alt="" />
+    </div>
+    <p
+      class="text-center mx-10 mt-10 text-xl text-white"
+      style="font-family: 'Joti One'"
+    >
+      Pesanan Anda telah selesai di buat dan akan segera diantar...
+    </p>
+    <div
+      id="slideshow"
+      class="w-20 fixed bottom-1 left-1/2 transform -translate-x-1/2"
+    >
+      <img src="../gambar/komi1.png" alt="Gambar 1" />
+      <img src="../gambar/komi2.png" alt="Gambar 2" />
+      <img src="../gambar/komi3.png" alt="Gambar 3" />
+      <!-- Tambahkan gambar sesuai kebutuhan -->
+    </div>
+
+    <script>
+      const slideshow = document.getElementById("slideshow");
+      const images = slideshow.getElementsByTagName("img");
+      let currentIndex = 0;
+
+      function showImage(index) {
+        // Sembunyikan semua gambar
+        for (let i = 0; i < images.length; i++) {
+          images[i].style.display = "none";
+        }
+
+        // Tampilkan gambar yang sesuai index
+        images[index].style.display = "block";
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+
+      // Atur interval ganti gambar (dalam milidetik)
+      const interval = 300; // Misalnya, ganti gambar setiap 2 detik
+
+      // Mulai slideshow
+      setInterval(nextImage, interval);
+
+      // Tampilkan gambar pertama saat halaman dimuat
+      showImage(currentIndex);
+    </script>
+  </body>
+</html>

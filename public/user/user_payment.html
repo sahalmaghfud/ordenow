@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Joti+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="bg-cyan-600">
+    <a href="user_nama.php"
+      ><img class="w-14" src="../back_icon.png" alt=""
+    /></a>
+    <div class="flex items-center -mt-14 flex-col">
+      <img
+        class="w-36 mb-3"
+        src="../logo_ORDerNwow-removebg-preview.png"
+        alt=""
+      />
+
+      <p class="bg-yellow-200 px-6 rounded-xl" style="font-family: 'Joti One'">
+        Pembayaran
+      </p>
+
+      <p
+        style="font-family: 'Joti One'"
+        class="text-center text-white mx-3 mt-3"
+      >
+        Pesanan Anda Selesai Dibuat Silahkan Pilih Metode Pembayaran Untuk
+        Melanjutkan :
+      </p>
+    </div>
+
+    <div class="w-full flex flex-col items-center">
+      <div
+        class="w-80 bg-yellow-100 text-center py-14 mt-10 rounded-3xl shadow-xl"
+      >
+        <p class="text-3xl" id="tunai">Tunai</p>
+        <p id="ket" class="hidden">*silahkan menuju ke kasir</p>
+      </div>
+      <div
+        class="w-80 bg-yellow-100 text-center py-14 mt-10 rounded-3xl shadow-2xl"
+      >
+        <a href="qr_contoh.jpeg" target="_blank">
+          <p class="text-3xl">Qris</p>
+        </a>
+      </div>
+    </div>
+    <form action="cekpembayaran.php" method="post">
+      <div class="flex justify-center">
+        <button
+          style="font-family: 'Joti One'"
+          class="text-black bg-yellow-400 hover:bg-yellow-800 focus:ring-4 focus:ring-red-300 rounded-lg text-lg mr-2 mt-5 my-auto px-2 py-2 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+        >
+          Cek No Antrian
+        </button>
+      </div>
+    </form>
+
+    <script>
+      const tunai = document.getElementById("tunai");
+      const ket = document.getElementById("ket");
+      tunai.addEventListener("click", () => {
+        ket.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-cyan-600">
+    <a href="user_nama.html"
+      ><img class="w-14" src="../back_icon.png" alt=""
+    /></a>
+    <div class="flex items-center -mt-14 flex-col">
+      <img
+        class="w-36 mb-3"
+        src="../logo_ORDerNwow-removebg-preview.png"
+        alt=""
+      />
+      <select
+        name="tipe"
+        id=""
+        class="bg-yellow-400 rounded-lg p-1"
+        style="font-family: 'Joti One'"
+      >
+        <option style="font-family: serif" value="makanan">makanan</option>
+        <option style="font-family: serif" value="minuman">minuman</option>
+        <option style="font-family: serif" value="semua menu">
+          semua menu
+        </option>
+      </select>
+    </div>
+    <form action="#">
+      <div
+        class="flex bg-yellow-100 mt-4 w-11/12 mx-auto p-2 rounded-lg shadow-2xl"
+      >
+        <img
+          class="w-32 self-center shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+          src="../esteh.jpeg"
+          alt=""
+        />
+        <div class="flex flex-col ml-5">
+          <p style="font-family: 'Joti One'">Es Teh</p>
+          <p>Rp.8000</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda,
+            facilis?
+          </p>
+          <div class="flex mt-2 items-center">
+            <p>JUMLAH:</p>
+            <input
+              type="number"
+              name="esteh"
+              min="0"
+              max="100"
+              class="rounded-lg h-10 w-10 text-center ml-2"
+              value="0"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col p-4">
+        <label style="font-family: 'Joti One'" for="catatan">Catatan:</label>
+        <textarea
+          name="catatan"
+          id=""
+          cols="20"
+          rows="1"
+          class="p-2 bg-yellow-100 rounded-lg shadow-xl"
+        ></textarea>
+      </div>
+      <div class="flex justify-center mt-5 rounded-lg">
+        <button
+          style="font-family: 'Joti One'"
+          value="submit"
+          class="text-black bg-yellow-500 hover:bg-yellow-400 focus:ring-4 focus:ring-slate-500 font-medium rounded-lg text-xl px-10 py-3 mr-2 mb-2 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+        >
+          Lanjut
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
